@@ -19,8 +19,9 @@ function About() {
   return (
     <>
       <h2 className="head-text">
-        I Know That <span>Good Development</span>
-        <br /> means <span>Good Business</span>
+        <span>Galiu Jums</span> Suteikti
+        <br />
+        Šias <span>Paslaugas</span>
       </h2>
       <div className="app__profiles">
         {abouts.map((about, index) => (
@@ -45,8 +46,4 @@ function About() {
   );
 }
 
-export default AppWrap(
-  MotionWrap(About, "app__about"),
-  "about",
-  "app__whitebg"
-);
+export default AppWrap(MotionWrap(About, "app__about"), "apie", "app__whitebg");

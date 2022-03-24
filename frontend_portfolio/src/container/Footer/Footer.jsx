@@ -38,13 +38,13 @@ const Footer = () => {
   };
   return (
     <>
-      <h2 className="head-text">Take a coffee & chat with me</h2>
+      <h2 className="head-text">Susisiekime!</h2>
 
       <div className="app__footer-cards">
         <div className="app__footer-card ">
           <img src={images.email} alt="email" />
-          <a href="mailto:hello@micael.com" className="p-text">
-            hello@micael.com
+          <a href="mailto:justinas@justinaswb.co.uk" className="p-text">
+            justinas@justinaswb.co.uk
           </a>
         </div>
         <div className="app__footer-card">
@@ -60,38 +60,43 @@ const Footer = () => {
             <input
               className="p-text"
               type="text"
-              placeholder="Your Name"
+              placeholder="Jūsų Vardas"
               name="name"
               value={name}
               onChange={handleChangeInput}
+              required
             />
           </div>
           <div className="app__flex">
             <input
               className="p-text"
               type="email"
-              placeholder="Your Email"
+              placeholder="El. Pašto Adresas"
               name="email"
               value={email}
               onChange={handleChangeInput}
+              required
             />
           </div>
           <div>
             <textarea
               className="p-text"
-              placeholder="Your Message"
+              placeholder="Žinutė"
               value={message}
               name="message"
               onChange={handleChangeInput}
+              required
             />
           </div>
           <button type="button" className="p-text" onClick={handleSubmit}>
-            {!loading ? "Send Message" : "Sending..."}
+            {!loading ? "Siųsti" : "Siunčiama..."}
           </button>
         </div>
       ) : (
         <div>
-          <h3 className="head-text">Thank you for getting in touch!</h3>
+          <h3 className="head-text">
+            Žinutė išsiųsta! Atsakysiu per 24 valandas.
+          </h3>
         </div>
       )}
     </>
@@ -100,6 +105,6 @@ const Footer = () => {
 
 export default AppWrap(
   MotionWrap(Footer, "app__footer"),
-  "contact",
+  "kontaktai",
   "app__whitebg"
 );

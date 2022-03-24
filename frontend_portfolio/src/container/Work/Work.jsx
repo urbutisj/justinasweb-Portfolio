@@ -7,7 +7,7 @@ import { urlFor, client } from "../../client";
 
 import "./Work.scss";
 function Work() {
-  const [activeFilter, setActiveFilter] = useState("All");
+  const [activeFilter, setActiveFilter] = useState("Visi");
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [works, setWorks] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
@@ -27,7 +27,7 @@ function Work() {
     setTimeout(() => {
       setAnimateCard([{ y: 0, opacity: 1 }]);
 
-      if (item === "All") {
+      if (item === "Visi") {
         setFilterWork(works);
       } else {
         setFilterWork(works.filter((work) => work.tags.includes(item)));
@@ -38,22 +38,20 @@ function Work() {
   return (
     <>
       <h2 className="head-text">
-        My Creative <span>Portfolio</span> section
+        Darbai / <span>Projektai</span>
       </h2>
       <div className="app__work-filter">
-        {["UI/UX", "Web App", "Mobile App", "React JS", "All"].map(
-          (item, index) => (
-            <div
-              key={index}
-              onClick={() => handleWorkFilter(item)}
-              className={`app__work-filter-item app__flex p-text ${
-                activeFilter === item ? "item-active" : ""
-              }`}
-            >
-              {item}
-            </div>
-          )
-        )}
+        {["React JS", "Websites", "Visi"].map((item, index) => (
+          <div
+            key={index}
+            onClick={() => handleWorkFilter(item)}
+            className={`app__work-filter-item app__flex p-text ${
+              activeFilter === item ? "item-active" : ""
+            }`}
+          >
+            {item}
+          </div>
+        ))}
       </div>
 
       <motion.div
@@ -115,6 +113,6 @@ function Work() {
 
 export default AppWrap(
   MotionWrap(Work, "app__works"),
-  "work",
+  "darbai",
   "app__primarybg"
 );

@@ -30,13 +30,13 @@ function Header() {
           <div className="badge-cmp app__flex">
             <span>👋</span>
             <div style={{ marginLeft: 20 }}>
-              <p className="p-text">Hello, I am</p>
+              <p className="p-text">Sveiki, esu</p>
               <h1 className="head-text">Justinas</h1>
             </div>
           </div>
           <div className="tag-cmp app__flex">
-            <p className="p-text">Web Developer</p>
-            <p className="p-text">Freelancer</p>
+            <p className="p-text">Web Programuotojas bei</p>
+            <p className="p-text">Freelanceris</p>
           </div>
         </div>
       </motion.div>
@@ -45,7 +45,7 @@ function Header() {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__header-img"
       >
-        <img src={images.profile} alt="Profile Img" />
+        <img src={images.justinas} alt="Profile Img" />
         <motion.img
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1, ease: "easeInOut" }}
@@ -60,7 +60,7 @@ function Header() {
         whileInView={scaleVariants.whileInView}
         className="app__header-circles"
       >
-        {[images.flutter, images.redux, images.sass].map((circle, index) => (
+        {[images.html, images.css, images.javascript].map((circle, index) => (
           <div className="circle-cmp app__flex" key={`circle-${index}`}>
             <img src={circle} alt="circle" />
           </div>
@@ -70,4 +70,4 @@ function Header() {
   );
 }
 
-export default AppWrap(Header, "home");
+export default AppWrap(Header, "pagrindinis");
