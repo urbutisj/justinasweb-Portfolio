@@ -30,13 +30,13 @@ function Header() {
           <div className="badge-cmp app__flex">
             <span>👋</span>
             <div style={{ marginLeft: 20 }}>
-              <p className="p-text">Sveiki, esu</p>
+              <p className="p-text">Hi, I'm</p>
               <h1 className="head-text">Justinas</h1>
             </div>
           </div>
           <div className="tag-cmp app__flex">
-            <p className="p-text">Web Programuotojas bei</p>
-            <p className="p-text">Freelanceris</p>
+            <p className="p-text">Web Developer and</p>
+            <p className="p-text">Freelancer</p>
           </div>
         </div>
       </motion.div>
@@ -70,4 +70,4 @@ function Header() {
   );
 }
 
-export default AppWrap(Header, "pagrindinis");
+export default AppWrap(Header, "home");

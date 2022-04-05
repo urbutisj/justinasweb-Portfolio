@@ -11,7 +11,7 @@ const AppWrap = (Component, idName, classNames) =>
           <Component />
           <div className="copyright">
             <p className="p-text">@2022 justinasweb.co.uk</p>
-            <p className="p-text">Visos teisės saugomos</p>
+            <p className="p-text">All rights reserved.</p>
           </div>
         </div>
         <NavigationDots active={idName} />

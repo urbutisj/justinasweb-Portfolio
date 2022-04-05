@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import { images } from "../../constants";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { client } from "../../client";
@@ -36,15 +35,16 @@ const Footer = () => {
       setIsFormSubmitted(true);
     });
   };
+
   return (
     <>
-      <h2 className="head-text">Susisiekime!</h2>
+      <h2 className="head-text">Contact Me!</h2>
 
       <div className="app__footer-cards">
         <div className="app__footer-card ">
           <img src={images.email} alt="email" />
-          <a href="mailto:justinas@justinaswb.co.uk" className="p-text">
-            justinas@justinaswb.co.uk
+          <a href="mailto:justinas@justinasweb.co.uk" className="p-text">
+            justinas@justinasweb.co.uk
           </a>
         </div>
         <div className="app__footer-card">
@@ -60,7 +60,7 @@ const Footer = () => {
             <input
               className="p-text"
               type="text"
-              placeholder="Jūsų Vardas"
+              placeholder="Your Name"
               name="name"
               value={name}
               onChange={handleChangeInput}
@@ -71,7 +71,7 @@ const Footer = () => {
             <input
               className="p-text"
               type="email"
-              placeholder="El. Pašto Adresas"
+              placeholder="Email Address"
               name="email"
               value={email}
               onChange={handleChangeInput}
@@ -81,22 +81,21 @@ const Footer = () => {
           <div>
             <textarea
               className="p-text"
-              placeholder="Žinutė"
+              placeholder="Message"
               value={message}
               name="message"
               onChange={handleChangeInput}
               required
             />
           </div>
+          <div></div>
           <button type="button" className="p-text" onClick={handleSubmit}>
-            {!loading ? "Siųsti" : "Siunčiama..."}
+            {!loading ? "Submit" : "Sending..."}
           </button>
         </div>
       ) : (
         <div>
-          <h3 className="head-text">
-            Žinutė išsiųsta! Atsakysiu per 24 valandas.
-          </h3>
+          <h3 className="head-text">Message received! I'll reply in 24h!</h3>
         </div>
       )}
     </>
@@ -104,7 +103,7 @@ const Footer = () => {
 };
 
 export default AppWrap(
-  MotionWrap(Footer, "app__footer"),
-  "kontaktai",
+  MotionWrap(Footer, "app__contacts"),
+  "contacts",
   "app__whitebg"
 );

@@ -7,7 +7,7 @@ import { urlFor, client } from "../../client";
 
 import "./Work.scss";
 function Work() {
-  const [activeFilter, setActiveFilter] = useState("Visi");
+  const [activeFilter, setActiveFilter] = useState("All");
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [works, setWorks] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
@@ -27,7 +27,7 @@ function Work() {
     setTimeout(() => {
       setAnimateCard([{ y: 0, opacity: 1 }]);
 
-      if (item === "Visi") {
+      if (item === "All") {
         setFilterWork(works);
       } else {
         setFilterWork(works.filter((work) => work.tags.includes(item)));
@@ -37,11 +37,9 @@ function Work() {
 
   return (
     <>
-      <h2 className="head-text">
-        Darbai / <span>Projektai</span>
-      </h2>
+      <h2 className="head-text">Portfolio</h2>
       <div className="app__work-filter">
-        {["React JS", "Websites", "Visi"].map((item, index) => (
+        {["React JS", "Websites", "All"].map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
@@ -112,7 +110,7 @@ function Work() {
 }
 
 export default AppWrap(
-  MotionWrap(Work, "app__works"),
-  "darbai",
+  MotionWrap(Work, "app__portfolio"),
+  "portfolio",
   "app__primarybg"
 );

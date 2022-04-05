@@ -25,7 +25,7 @@ const Skills = () => {
 
   return (
     <>
-      <h2 className="head-text">Įgūdžiai & Patirtis</h2>
+      <h2 className="head-text">Skills &amp; Experience</h2>
 
       <div className="app__skills-container">
         <motion.div className="app__skills-list">
@@ -87,6 +87,6 @@ const Skills = () => {
 
 export default AppWrap(
   MotionWrap(Skills, "app__skills"),
-  "įgūdžiai",
+  "skills",
   "app__whitebg"
 );
